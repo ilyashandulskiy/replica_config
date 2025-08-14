@@ -1,0 +1,174 @@
+{
+  "tools": [
+    {
+      "id": "transfer_to_operator",
+      "name": "Оператор | Перевод на оператора"
+    },
+    {
+      "id": "get_doctor_schedule",
+      "name": "Врач | Посмотреть расписание врача"
+    },
+    {
+      "id": "make_appointment",
+      "name": "Запись | Сделать запись в календарь"
+    },
+    {
+      "id": "cancel_appointment",
+      "name": "Запись | Отменить прием"
+    },
+    {
+      "id": "move_appointment",
+      "name": "Запись | Перенести прием"
+    },
+    {
+      "id": "make_appointment_to_waitlist",
+      "name": "Лист ожидания | Сделать запись в лист ожидания"
+    },
+    {
+      "id": "get_client_appointments",
+      "name": "Клиент | Посмотреть приемы клиента"
+    },
+    {
+      "id": "get_relevant_services",
+      "name": "Услуга | Найти услугу"
+    }
+  ],
+  "types": [
+    {
+      "id": "user",
+      "name": "Клиент",
+      "color": "lightblue"
+    },
+    {
+      "id": "assistant",
+      "name": "Реплика",
+      "color": "pink"
+    },
+    {
+      "id": "tool",
+      "name": "Интеграция",
+      "color": "lightyellow"
+    },
+    {
+      "id": "phrase",
+      "name": "Шаблонная фраза",
+      "color": "pink"
+    },
+    {
+      "id": "system",
+      "name": "Система",
+      "color": "lightgray"
+    },
+    {
+      "id": "empty",
+      "name": "Пусто",
+      "color": "white"
+    }
+  ],
+  "workspaces": [
+    {
+      "id": "demo",
+      "name": "Агент для Демо"
+    },
+    {
+      "id": "lotos",
+      "name": "МЦ Лотос"
+    }
+  ],
+  "scenarios": {
+    "demo": [
+      {
+        "id": "debug",
+        "name": "Для тестирования",
+        "description": ""
+      },
+      {
+        "id": "appointment.create.doctor",
+        "name": "Новая запись к конкретному врачу",
+        "description": "Клиент хочет записаться к врачу по имени или фамилии"
+      },
+      {
+        "id": "appointment.create.specialty",
+        "name": "Новая запись по специальности",
+        "description": "Клиент хочет записаться к любому врачу по специальности"
+      },
+      {
+        "id": "appointment.create.service",
+        "name": "Новая запись по услуге",
+        "description": "Клиент хочет записаться на конкретную услугу, не уточняет к какому именно врачу"
+      },
+      {
+        "id": "appointment.move",
+        "name": "Перенести запись",
+        "description": "У клиента уже есть запись и он хочет ее перенести"
+      },
+      {
+        "id": "appointment.cancel",
+        "name": "Отменить запись",
+        "description": "У клиента уже есть запись и он хочет ее отменить"
+      },
+      {
+        "id": "appointment.details",
+        "name": "Уточнить детали записи",
+        "description": "У клиента уже есть запись и он хочет уточнить детали по ней"
+      },
+      {
+        "id": "inform",
+        "name": "Дать информацию",
+        "description": "У клиента есть вопрос по процессу, услуге или цене, нужно дать ему информацию"
+      },
+      {
+        "id": "operator",
+        "name": "Перевод на оператора",
+        "description": "Клиент просит перевести на оператора"
+      }
+    ],
+    "lotos": [
+      {
+        "id": "debug",
+        "name": "Для тестирования",
+        "description": ""
+      },
+      {
+        "id": "appointment.create.doctor",
+        "name": "Новая запись к конкретному врачу",
+        "description": "Клиент хочет записаться к врачу по имени или фамилии"
+      },
+      {
+        "id": "appointment.create.specialty",
+        "name": "Новая запись по специальности",
+        "description": "Клиент хочет записаться к любому врачу по специальности"
+      },
+      {
+        "id": "appointment.move",
+        "name": "Перенести запись",
+        "description": "У клиента уже есть запись и он хочет ее перенести"
+      },
+      {
+        "id": "appointment.cancel",
+        "name": "Отменить запись",
+        "description": "У клиента уже есть запись и он хочет ее отменить"
+      },
+      {
+        "id": "appointment.details",
+        "name": "Уточнить детали записи",
+        "description": "У клиента уже есть запись и он хочет уточнить детали по ней"
+      },
+      {
+        "id": "operator",
+        "name": "Перевод на оператора",
+        "description": "Клиент просит перевести на оператора"
+      }
+    ]
+  },
+  "phrases": [
+    {
+      "id": "task.end",
+      "text": "Направила вам всю информацию на WhatsApp! Могу еще чем то помочь?",
+      "texts": [
+        "Направила вам всю информацию на WhatsApp! Могу еще чем то помочь?",
+        "Продублировала информацию вам на WhatsApp! Могу еще чем то помочь?"
+      ]
+    }
+  ]
+}
